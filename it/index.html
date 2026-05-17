@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagros Lahuerta | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 0; }
+        .nav-lang { font-weight: bold; text-decoration: none; color: white; }
+        .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; }
+        .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-dark text-end px-4 py-2">
+        <a href="../index.html" class="nav-lang">EN</a> | 
+        <a href="index.html" class="nav-lang text-warning">IT</a>
+    </div>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Milagros Lahuerta</h1>
+            <p class="lead font-italic">Studente di Ingegneria Biomedica | Politecnico di Torino</p>
+            <div class="mt-4">
+                <p class="mb-1"><strong>Email:</strong> milagroslahuerta@example.com</p>
+                <p class="mb-1"><strong>LinkedIn:</strong> <a href="#" class="text-white text-decoration-underline">milagroslahuerta</a></p>
+                <p class="mb-3"><strong>Località:</strong> Torino, Italia</p>
+                <a href="#projects" class="btn btn-outline-light m-1">Visualizza Progetti</a>
+                <a href="#documents" class="btn btn-outline-light m-1">Documenti</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5" style="max-width: 900px;">
+        
+        <section id="about">
+            <h2 class="section-title">Su di Me / Informazioni</h2>
+            <p>Sono una studentessa di Ingegneria Biomedica attualmente iscritta al <strong>Politecnico di Torino (POLITO)</strong>. Il mio percorso accademico e le mie esperienze pratiche di laboratorio si concentrano principalmente sullo sviluppo di software biomedico, l'elaborazione di segnali fisiologici e l'applicazione della data science avanzata per l'ottimizzazione delle tecnologie sanitarie.</p>
+            <p>Ho sviluppato progetti tecnici specializzati che includono algoritmi di clustering avanzati, architetture neurali e strutture di telemonitoraggio. Sono fortemente motivata dall'integrazione di tecnologia, intelligenza artificiale e sistemi medici per migliorare l'assistenza al paziente.</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Progetti Selezionati</h2>
+            <p class="text-muted">Ingegneria biomedica incentrata su software clinici, analisi dei dati e architetture di telemedicina.</p>
+            
+            <div class="project-card">
+                <h4>Digital Twin per il Monitoraggio del Paziente</h4>
+                <p class="text-secondary">Progetto di Telemedicina e Sistemi Sanitari</p>
+                <p>Progettazione di un diagramma di architettura di comunicazione per un sistema di gemello digitale (Digital Twin) mirato al monitoraggio remoto del paziente. Integrazione di diari clinici e ottimizzazione del flusso di dati telemetrici continui.</p>
+                <a href="#" class="btn btn-sm btn-primary">Dettagli del Progetto</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Interfaccia Web Streamlit per il Monitoraggio ECG</h4>
+                <p class="text-secondary">Sviluppo di Software Biomedico</p>
+                <p>Sviluppo di un'interfaccia web grafica intuitiva in Python utilizzando Streamlit per caricare, elaborare e visualizzare efficacemente i dati di tracciamento dell'elettrocardiogramma (ECG) per l'interpretazione medica.</p>
+                <a href="#" class="btn btn-sm btn-primary">Visualizza il Codice</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Clustering Avanzato e Analisi Predittiva</h4>
+                <p class="text-secondary">Data Science e Ricerca in Neurotecnologie</p>
+                <p>Applicazione di framework di machine learning, inclusi Self-Organizing Maps (SOM), Clustering Gerarchico e Multi-Layer Perceptrons (MLP) per la classificazione dei dati clinici, insieme ad analisi di elettrofisiologia con metriche di spike detection multicanale.</p>
+                <a href="#" class="btn btn-sm btn-primary">Visualizza il Report</a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Competenze (Skills)</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Competenze Tecniche</h5>
+                    <p>Python, MATLAB, Streamlit, Scikit-learn, Pandas, NumPy, Elaborazione dei Segnali (ECG), Machine Learning, Architettura dei Dati, LaTeX, Git.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Competenze Professionali</h5>
+                    <p>Pensiero Analitico, Risoluzione di Problemi Tecnici, Lavoro di Squadra Interfunzionale, Adattabilità in Ambienti di Ricerca.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2 class="section-title">Interessi di Ingegneria</h2>
+            <ul>
+                <li>Sviluppo di Software Biomedico e UI Mediche</li>
+                <li>Elaborazione di Segnali Fisiologici ed Estrazione di Caratteristiche</li>
+                <li>Intelligenza Artificiale Avanzata e Machine Learning nella Sanità</li>
+                <li>Framework di Telemedicina e Digital Twins</li>
+                <li>Neurotecnologie e Interfacce Cervello-Computer (BCI)</li>
+            </ul>
+        </section>
+
+        <section id="languages">
+            <h2 class="section-title">Lingue</h2>
+            <p><strong>Spagnolo:</strong> Madrelingua</p>
+            <p><strong>Inglese:</strong> Ottima conoscenza professionale</p>
+            <p><strong>Italiano:</strong> Conoscenza professionale operativa (In preparazione per l'esame PLIDA B2)</p>
+        </section>
+
+        <section id="documents">
+            <h2 class="section-title">Documenti</h2>
+            <ul>
+                <li><a href="#">Curriculum Vitae Accademico (PDF)</a></li>
+                <li><a href="#">Certificato degli Studi – Politecnico di Torino</a></li>
+            </ul>
+        </section>
+
+        <section id="references">
+            <h2 class="section-title">Referenze</h2>
+            <p class="text-muted">Lettere di raccomandazione accademiche e professionali disponibili su richiesta.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 Milagros Lahuerta. Creato con GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
