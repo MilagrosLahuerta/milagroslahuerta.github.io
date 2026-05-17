@@ -3,39 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagros Lahuerta | Portfolio</title>
+    <title>Milagros L. | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 0; }
-        .nav-lang { font-weight: bold; text-decoration: none; color: white; }
-        .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; }
+        body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 56px; }
+        .navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,0.8); }
+        .navbar-dark .navbar-nav .nav-link:hover { color: white; }
+        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 50px 0; }
+        .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); margin-bottom: 15px; }
+        .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; font-weight: bold; }
         .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        .badge-tech { background-color: #e9ecef; color: #495057; font-weight: 500; margin-right: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="bg-dark text-end px-4 py-2">
-        <a href="index.html" class="nav-lang text-warning">EN</a> | 
-        <a href="it/index.html" class="nav-lang">IT</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Milagros Lahuerta</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documents">Documents</a></li>
+                </ul>
+                <span class="navbar-text fw-bold">
+                    <a href="index.html" class="text-warning text-decoration-none">EN</a> | 
+                    <a href="it/index.html" class="text-white text-decoration-none">IT</a>
+                </span>
+            </div>
+        </div>
+    </nav>
 
     <header class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Milagros Lahuerta</h1>
-            <p class="lead font-italic">Biomedical Engineering Student | Politecnico di Torino</p>
-            <div class="mt-4">
+            <img src="profile_cv.jpg" alt="Milagros Lahuerta" class="profile-img">
+            <h1 class="display-5 fw-bold">Milagros Lahuerta</h1>
+            <p class="lead italic">Biomedical Engineering Student | Politecnico di Torino</p>
+            <div class="mt-3" style="font-size: 0.95rem;">
                 <p class="mb-1"><strong>Email:</strong> milagroslahuerta@example.com</p>
                 <p class="mb-1"><strong>LinkedIn:</strong> <a href="#" class="text-white text-decoration-underline">milagroslahuerta</a></p>
-                <p class="mb-3"><strong>Location:</strong> Turin, Italy</p>
-                <a href="#projects" class="btn btn-outline-light m-1">View Projects</a>
-                <a href="#documents" class="btn btn-outline-light m-1">View Documents</a>
+                <p class="mb-2"><strong>Location:</strong> Turin, Italy</p>
             </div>
         </div>
     </header>
 
-    <main class="container my-5" style="max-width: 900px;">
+    <main class="container my-5" style="max-width: 850px;">
         
         <section id="about">
             <h2 class="section-title">About Me</h2>
@@ -45,7 +63,6 @@
 
         <section id="projects">
             <h2 class="section-title">Selected Projects</h2>
-            <p class="text-muted">Biomedical engineering implementations focused on clinical software, data analytics, and telemedicine architectures.</p>
             
             <div class="project-card">
                 <h4>Digital Twin for Patient Monitoring</h4>
@@ -116,9 +133,7 @@
 
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p class="mb-0">&copy; 2026 Milagros Lahuerta. Built with GitHub Pages.</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
