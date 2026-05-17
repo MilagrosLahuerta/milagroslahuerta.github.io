@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagros L. | Portfolio</title>
+    <title>María Milagros Lahuerta | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 56px; }
-        .navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,0.8); }
-        .navbar-dark .navbar-nav .nav-link:hover { color: white; }
+        .bg-corporate { background-color: #1e3c72 !important; }
         .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 50px 0; }
         .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); margin-bottom: 15px; }
         .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; font-weight: bold; }
@@ -17,9 +16,9 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-corporate fixed-top px-3">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">Milagros Lahuerta</a>
+            <a class="navbar-brand fw-bold" href="#">MML</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,6 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
                     <li class="nav-item"><a class="nav-link" href="#documents">Documents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
                 </ul>
                 <span class="navbar-text fw-bold">
                     <a href="index.html" class="text-warning text-decoration-none">EN</a> | 
@@ -42,13 +42,15 @@
 
     <header class="hero-section text-center">
         <div class="container">
-            <img src="profile_cv.jpg" alt="Milagros Lahuerta" class="profile-img">
-            <h1 class="display-5 fw-bold">Milagros Lahuerta</h1>
-            <p class="lead italic">Biomedical Engineering Student | Politecnico di Torino</p>
+            <img src="profile_cv.jpg" alt="María Milagros Lahuerta" class="profile-img">
+            <h1 class="display-5 fw-bold">María Milagros Lahuerta</h1>
+            <p class="lead italic">Biomedical Engineering Master's Student</p>
             <div class="mt-3" style="font-size: 0.95rem;">
-                <p class="mb-1"><strong>Email:</strong> milagroslahuerta@example.com</p>
-                <p class="mb-1"><strong>LinkedIn:</strong> <a href="#" class="text-white text-decoration-underline">milagroslahuerta</a></p>
-                <p class="mb-2"><strong>Location:</strong> Turin, Italy</p>
+                <p class="mb-1"><strong>Email:</strong> milagroslahuerta0@gmail.com</p>
+                <p class="mb-1"><strong>Phone:</strong> +39 331 806 7506</p>
+                <p class="mb-1"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mar%C3%ADa-milagros-lahuerta-ab2a16258/?skipRedirect=true" target="_blank" class="text-white text-decoration-underline">María Milagros Lahuerta</a></p>
+                <p class="mb-3"><strong>Location:</strong> Turin, Italy</p>
+                <a href="projects/Curriculum_Vitae.pdf" target="_blank" class="btn btn-warning fw-bold btn-sm px-3">Download Curriculum Vitae (PDF)</a>
             </div>
         </div>
     </header>
@@ -57,8 +59,9 @@
         
         <section id="about">
             <h2 class="section-title">About Me</h2>
-            <p>I am a Biomedical Engineering student currently completing my studies at <strong>Politecnico di Torino (POLITO)</strong>. My academic path and hands-on laboratory experiences focus heavily on biomedical software development, processing physiological signals, and utilizing advanced data science methodologies to optimize healthcare technologies.</p>
-            <p>I have developed specialized technical projects involving advanced clustering algorithms, neural architectures, and telemonitoring structures. I am strongly motivated by the integration of technology, AI, and medical systems to improve patient care outcomes.</p>
+            <p>I am an advanced Biomedical Engineering student, currently completing a double degree program between the <strong>National University of Córdoba (UNC)</strong> and <strong>Politecnico di Torino (POLITO)</strong>, where I am in my final year of Master of Science. 
+                My training covers a broad range of biomedical engineering areas, including medical devices, medical signal and image processing, and sensor-based physiological monitoring systems. I have also been exposed to interdisciplinary fields such as neuroscience, neuroengineering, and tissue engineering, which have strengthened my ability to work at the intersection of engineering, biology, and healthcare technologies.
+                I am currently seeking internship and/or thesis opportunities that will allow me to deepen my knowledge, contribute to innovative and impactful projects, and continue developing both my technical expertise and professional growth. I am especially interested in environments where engineering, technology, and healthcare converge, and I am open to exploring a wide range of topics within biomedical engineering.</p>
         </section>
 
         <section id="projects">
@@ -68,21 +71,21 @@
                 <h4>Digital Twin for Patient Monitoring</h4>
                 <p class="text-secondary">Telemedicine & Healthcare Systems Project</p>
                 <p>Designed a communication architecture diagram for a digital twin system targeted toward remote patient monitoring. Integrated clinical diaries and continuous telemetry data flow optimization channels.</p>
-                <a href="#" class="btn btn-sm btn-primary">View Project Details</a>
+                <a href="projects/digital_twin.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
             </div>
 
             <div class="project-card">
                 <h4>Streamlit Web Interface for ECG Monitoring</h4>
                 <p class="text-secondary">Biomedical Software Development</p>
                 <p>Developed an intuitive graphical web interface in Python utilizing Streamlit to load, process, and display electrocardiogram (ECG) tracking data effectively for medical interpretation.</p>
-                <a href="#" class="btn btn-sm btn-primary">View Code Repository</a>
+                <a href="projects/ecg_interface.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
             </div>
 
             <div class="project-card">
                 <h4>Advanced Clustering & Predictive Analytics</h4>
                 <p class="text-secondary">Data Science & Neurotechnology Research</p>
                 <p>Applied machine learning frameworks including Self-Organizing Maps (SOM), Hierarchical Clustering, and Multi-Layer Perceptrons (MLP) for data classification, alongside electrophysiology assays featuring multi-channel spike detection metrics.</p>
-                <a href="#" class="btn btn-sm btn-primary">View Analysis Report</a>
+                <a href="projects/data_science_research.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
             </div>
         </section>
 
@@ -121,14 +124,18 @@
         <section id="documents">
             <h2 class="section-title">Documents</h2>
             <ul>
-                <li><a href="#">Academic Curriculum Vitae (PDF)</a></li>
-                <li><a href="#">Academic Transcript – Politecnico di Torino</a></li>
+                <li><a href="certificates/PLIDA_Certificate.pdf" target="_blank">PLIDA Italian Language Certificate</a></li>
+                <li><a href="certificates/Academic_Transcript.pdf" target="_blank">Academic Transcript – Politecnico di Torino</a></li>
             </ul>
         </section>
 
         <section id="references">
             <h2 class="section-title">References</h2>
-            <p class="text-muted">Academic and professional recommendation letters available upon request.</p>
+            <p class="text-muted">Academic recommendation letters from university professors:</p>
+            <ul>
+                <li><a href="letters/Recommendation_Letter_1.pdf" target="_blank">Recommendation Letter – Professor 1</a></li>
+                <li><a href="letters/Recommendation_Letter_2.pdf" target="_blank">Recommendation Letter – Professor 2</a></li>
+            </ul>
         </section>
 
     </main>
