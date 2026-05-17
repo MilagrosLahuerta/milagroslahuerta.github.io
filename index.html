@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagros Lahuerta | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 0; }
+        .nav-lang { font-weight: bold; text-decoration: none; color: white; }
+        .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; }
+        .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .badge-tech { background-color: #e9ecef; color: #495057; font-weight: 500; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-dark text-end px-4 py-2">
+        <a href="index.html" class="nav-lang text-warning">EN</a> | 
+        <a href="it/index.html" class="nav-lang">IT</a>
+    </div>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Milagros Lahuerta</h1>
+            <p class="lead font-italic">Biomedical Engineering Student | Politecnico di Torino</p>
+            <div class="mt-4">
+                <p class="mb-1"><strong>Email:</strong> milagroslahuerta@example.com</p>
+                <p class="mb-1"><strong>LinkedIn:</strong> <a href="#" class="text-white text-decoration-underline">milagroslahuerta</a></p>
+                <p class="mb-3"><strong>Location:</strong> Turin, Italy</p>
+                <a href="#projects" class="btn btn-outline-light m-1">View Projects</a>
+                <a href="#documents" class="btn btn-outline-light m-1">View Documents</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5" style="max-width: 900px;">
+        
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I am a Biomedical Engineering student currently completing my studies at <strong>Politecnico di Torino (POLITO)</strong>. My academic path and hands-on laboratory experiences focus heavily on biomedical software development, processing physiological signals, and utilizing advanced data science methodologies to optimize healthcare technologies.</p>
+            <p>I have developed specialized technical projects involving advanced clustering algorithms, neural architectures, and telemonitoring structures. I am strongly motivated by the integration of technology, AI, and medical systems to improve patient care outcomes.</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="text-muted">Biomedical engineering implementations focused on clinical software, data analytics, and telemedicine architectures.</p>
+            
+            <div class="project-card">
+                <h4>Digital Twin for Patient Monitoring</h4>
+                <p class="text-secondary">Telemedicine & Healthcare Systems Project</p>
+                <p>Designed a communication architecture diagram for a digital twin system targeted toward remote patient monitoring. Integrated clinical diaries and continuous telemetry data flow optimization channels.</p>
+                <a href="#" class="btn btn-sm btn-primary">View Project Details</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Streamlit Web Interface for ECG Monitoring</h4>
+                <p class="text-secondary">Biomedical Software Development</p>
+                <p>Developed an intuitive graphical web interface in Python utilizing Streamlit to load, process, and display electrocardiogram (ECG) tracking data effectively for medical interpretation.</p>
+                <a href="#" class="btn btn-sm btn-primary">View Code Repository</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Advanced Clustering & Predictive Analytics</h4>
+                <p class="text-secondary">Data Science & Neurotechnology Research</p>
+                <p>Applied machine learning frameworks including Self-Organizing Maps (SOM), Hierarchical Clustering, and Multi-Layer Perceptrons (MLP) for data classification, alongside electrophysiology assays featuring multi-channel spike detection metrics.</p>
+                <a href="#" class="btn btn-sm btn-primary">View Analysis Report</a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Technical Skills</h5>
+                    <p>Python, MATLAB, Streamlit, Scikit-learn, Pandas, NumPy, Signal Processing, Machine Learning, Data Architecture, LaTeX, Git.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Professional Skills</h5>
+                    <p>Analytical Thinking, Technical Problem Solving, Cross-functional Teamwork, Adaptability in Research Environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2 class="section-title">Engineering Interests</h2>
+            <ul>
+                <li>Biomedical Software & Medical UI Development</li>
+                <li>Physiological Signal Processing & Core Feature Extraction</li>
+                <li>Advanced Artificial Intelligence & Machine Learning in Healthcare</li>
+                <li>Telemedicine Frameworks & Digital Twins</li>
+                <li>Neurotechnology & Brain-Computer Interfaces (BCI)</li>
+            </ul>
+        </section>
+
+        <section id="languages">
+            <h2 class="section-title">Languages</h2>
+            <p><strong>Spanish:</strong> Native</p>
+            <p><strong>English:</strong> Full Professional Proficiency</p>
+            <p><strong>Italian:</strong> Professional Working Proficiency (Preparing PLIDA B2 Exam)</p>
+        </section>
+
+        <section id="documents">
+            <h2 class="section-title">Documents</h2>
+            <ul>
+                <li><a href="#">Academic Curriculum Vitae (PDF)</a></li>
+                <li><a href="#">Academic Transcript – Politecnico di Torino</a></li>
+            </ul>
+        </section>
+
+        <section id="references">
+            <h2 class="section-title">References</h2>
+            <p class="text-muted">Academic and professional recommendation letters available upon request.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 Milagros Lahuerta. Built with GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
