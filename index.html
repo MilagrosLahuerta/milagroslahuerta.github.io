@@ -8,21 +8,57 @@
     <style>
         body { background-color: #f4f3ef; color: #334155; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 56px; }
         .bg-corporate { background-color: #475569 !important; } /* Azul acero oscuro */
-        .hero-section { background: linear-gradient(135deg, #475569 0%, #64748b 100%); color: white; padding: 50px 0; } /* Encabezado mate */
+        
+        /* Encabezado mate */
+        .hero-section { background: linear-gradient(135deg, #475569 0%, #64748b 100%); color: white; padding: 50px 0; } 
         .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); margin-bottom: 15px; }
         .section-title { border-bottom: 2px solid #64748b; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #475569; font-weight: bold; }
-        .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-left: 4px solid #64748b; margin-bottom: 20px; }
+        
+        /* 🚀 EFECTOS INTERACTIVOS GLOBALES PARA TARJETAS */
+        .project-card, .interactive-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            border-left: 4px solid #64748b; 
+            margin-bottom: 20px; 
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+        }
+        /* Elevación y brillo sutil al pasar el mouse por encima */
+        .project-card:hover, .interactive-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+            border-left-color: #c5a880; /* El borde vira al ocre suave */
+        }
+        
+        /* 🔗 EFECTOS INTERACTIVOS PARA ENLACES DE LISTAS */
+        .interactive-list li {
+            padding: 4px 0;
+            transition: transform 0.2s ease;
+        }
+        .interactive-list li:hover {
+            transform: translateX(6px); /* Pequeño desplazamiento hacia la derecha */
+        }
+        .interactive-list a {
+            color: #334155;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .interactive-list a:hover {
+            color: #c5a880 !important; /* El link se ilumina en ocre */
+            text-decoration: underline;
+        }
         
         /* Botones principales de proyectos */
-        .btn-primary { background-color: #64748b; border-color: #64748b; color: white; }
-        .btn-primary:hover { background-color: #475569; border-color: #475569; color: white; }
+        .btn-primary { background-color: #64748b; border-color: #64748b; color: white; transition: background-color 0.2s, transform 0.2s; }
+        .btn-primary:hover { background-color: #475569; border-color: #475569; color: white; transform: scale(1.02); }
         
-        /* Botón de CV - Opción B: Arena / Ocre Suave */
-        .btn-cv { background-color: #c5a880; border-color: #c5a880; color: white; font-weight: 600; }
-        .btn-cv:hover { background-color: #b0936b; border-color: #b0936b; color: white; }
+        /* Botón de CV - Ocre Suave */
+        .btn-cv { background-color: #c5a880; border-color: #c5a880; color: white; font-weight: 600; transition: background-color 0.2s, transform 0.2s; }
+        .btn-cv:hover { background-color: #b0936b; border-color: #b0936b; color: white; transform: scale(1.03); }
         
-        /* Estilos del Selector de Idioma con el toque Ocre */
-        .lang-active { color: #ffd19a !important; font-weight: bold; } /* Ocre suave iluminado */
+        /* Selector de Idioma */
+        .lang-active { color: #ffd19a !important; font-weight: bold; } 
         .lang-inactive { color: rgba(255, 255, 255, 0.5) !important; font-weight: normal; }
     </style>
 </head>
@@ -167,69 +203,136 @@
                     <li><strong>Inter-Observer Variability Engineering:</strong> Addressed the core challenge of conflicting manual physician segmentations by utilizing dual-operator data subsets to harmonize clinical feature inputs.</li>
                     <li><strong>Clinical Generalizability Testing:</strong> Maintained strict separation of clinical cohorts by reserving one entire database from one of the centers as an unseen external Test Set, verifying the model's accuracy and adaptability in independent hospital environments.</li>
                 </ul>
+                <a href="projects/CAD_Healthcare_Project.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
             </div>
         </section>
 
         <section id="skills">
             <h2 class="section-title">Skills</h2>
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <h5>Technical Skills</h5>
-                    <p>Python, C++, MATLAB, Microsoft Office Suite, Streamlit, Signal Processing, Machine Learning, Data Architecture, LaTeX, Git.</p>
+                    <div class="interactive-card" style="height: 100%;">
+                        <h5 style="color: #475569; font-weight: 600; margin-bottom: 15px;">Biomedicine & Technical Expertise</h5>
+                        <p style="font-size: 0.95rem; line-height: 1.7;">Biosignal Processing & Analysis (ECG), Organ-on-a-Chip (OoC) Design, Microfluidics, Microelectrode Arrays (MEA), Healthcare Technology Management (HTM), Quality Assurance & Metrology, 3D Biological Modeling, Clinical Software Architecture.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h5>Professional Skills</h5>
-                    <p>Leadership, Analytical Thinking, Technical Problem Solving, Cross-functional Teamwork, Adaptability in Research Environments, Team Work.</p>
+                    <div class="interactive-card" style="height: 100%;">
+                        <h5 style="color: #475569; font-weight: 600; margin-bottom: 15px;">Data Science & Software</h5>
+                        <p style="font-size: 0.95rem; line-height: 1.7;"><strong>Languages:</strong> Python, MATLAB, C++, LaTeX, Git.<br>
+                        <strong>Libraries:</strong> NumPy, Pandas, SciPy, Scikit-learn, Streamlit, Nibabel, Matplotlib, Seaborn.<br>
+                        <strong>Frameworks:</strong> Machine Learning, Computer-Aided Diagnosis (CAD), Cybersecurity in e-Health (SHA-256, LFSR, DH-EKE, GDPR Privacy by Design).</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="interests">
             <h2 class="section-title">Engineering Interests</h2>
-            <ul>
-                <li>Biomedical Software & Medical UI Development</li>
-                <li>Physiological Signal Processing & Core Feature Extraction</li>
-                <li>Advanced Artificial Intelligence & Machine Learning in Healthcare</li>
-                <li>Telemedicine Frameworks</li>
-                <li>Neurotechnology & Brain-Computer Interfaces (BCI)</li>
-                <li>Data Science in Healthcare</li>
-            </ul>
+            <div class="interactive-card">
+                <ul class="mb-0" style="font-size: 0.95rem; line-height: 2; padding-left: 20px;">
+                    <li>Digital Twins & Predictive Modeling in Healthcare Frameworks</li>
+                    <li>Advanced Artificial Intelligence & Radiomics in Medical Imaging (CAD Systems)</li>
+                    <li>Neurotechnology, Neuroengineering & Brain-Computer Interfaces (BCI)</li>
+                    <li>Advanced Microfluidic Platforms & In Vitro Disease Modeling</li>
+                    <li>Cybersecurity, Cryptography & Data Privacy in Telemedicine (GDPR Compliance)</li>
+                    <li>Translational Medicine & Innovative Medical UI/UX Development</li>
+                </ul>
+            </div>
         </section>
 
         <section id="languages">
             <h2 class="section-title">Languages</h2>
-            <p><strong>Spanish:</strong> Native</p>
-            <p><strong>English:</strong> Level B2</p>
-            <p><strong>Italian:</strong> Level B2</p>
-            <p><strong>German:</strong> Level B1</p>
-            <p><strong>Chinese:</strong> Basic Level</p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇪🇸 <strong>Spanish</strong></span>
+                            <span class="text-muted small fw-bold">Native</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 100%; background-color: #c5a880;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇬🇧 <strong>English</strong></span>
+                            <span class="text-muted small fw-bold">Level B2</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 75%; background-color: #64748b;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇮🇹 <strong>Italian</strong></span>
+                            <span class="text-muted small fw-bold">Level B2 (PLIDA Certified)</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 75%; background-color: #64748b;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇩🇪 <strong>German</strong></span>
+                            <span class="text-muted small fw-bold">Level B1</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 50%; background-color: #94a3b8;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇨🇳 <strong>Chinese</strong></span>
+                            <span class="text-muted small fw-bold">Basic Level</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 25%; background-color: #cbd5e1;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="documents">
             <h2 class="section-title">Documents</h2>
-            <ul>
-                <li><a href="projects/PLIDA B2.pdf" target="_blank">PLIDA Italian Language Certificate</a></li>
-                <li><a href="projects/IFC certificado.pdf" target="_blank">International Fellowship Class-Certificate</a></li>
-                <li><a href="projects/Teilnahmebestätigung.pdf" target="_blank">German B1 Level - Certificate</a></li>
-                <li><a href="projects/cambridge-certificado.pdf" target="_blank">Cambridge English Level Certificate</a></li>
-                <li><a href="projects/certificado-chino.pdf" target="_blank">Chinese Language Certificate</a></li>
-                <li><a href="projects/Chair.pdf" target="_blank">IEEE UNC Student Branch Chair Certificate</a></li>
-                <li><a href="projects/Vice Chair.pdf" target="_blank">IEEE UNC Student Branch Vice Chair Certificate</a></li>
-                <li><a href="projects/WIE 2024.pdf" target="_blank">IEEE WIE Memership 2024 Certificate</a></li>
-                <li><a href="projects/WIE 2025.pdf" target="_blank">IEEE WIE Memership 2025 Certificate</a></li>
-                <li><a href="projects/certificates_MaríaMilagrosLahuerta.png" target="_blank">"Artificial Intelligence Tools for Medical Imaging Course"</a></li>
-                <li><a href="projects/impresion3D.png" target="_blank">3D Design and Bioprinting in Bioengineering Course</a></li>
-                <li><a href="projects/Congreso ZUNINO.pdf" target="_blank">Certificate of Attendance – Zunino Conference</a></li>
-            </ul>
+            <div class="interactive-card">
+                <ul class="interactive-list mb-0" style="list-style: none; padding-left: 0; font-size: 0.95rem; line-height: 2.2;">
+                    <li>Subido 📄 <a href="projects/Lahuerta_fd.pdf" target="_blank">Academic Transcript UNC</a></li>
+                    <li>Subido 📄 <a href="projects/PLIDA B2.pdf" target="_blank">PLIDA Italian Language Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/IFC certificado.pdf" target="_blank">International Fellowship Class-Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/Teilnahmebestätigung.pdf" target="_blank">German B1 Level Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/cambridge-certificado.pdf" target="_blank">Cambridge English Level Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/certificado-chino.pdf" target="_blank">Chinese Language Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/Chair.pdf" target="_blank">IEEE UNC Student Branch Chair Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/Vice Chair.pdf" target="_blank">IEEE UNC Student Branch Vice Chair Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/EMBS 2025.pdf" target="_blank">IEEE EMBS Membership Certificate</a></li>
+                    <li>Subido 📄 <a href="projects/WIE 2025.pdf" target="_blank">IEEE WIE Membership 2025 Certificate</a></li>
+                    <li>Subido 📜 <a href="projects/certificates_MaríaMilagrosLahuerta.png" target="_blank">Artificial Intelligence Tools for Medical Imaging Course</a></li>
+                    <li>Subido 📜 <a href="projects/impresion3D.png" target="_blank">3D Design and Bioprinting in Bioengineering Course</a></li>
+                    <li>Subido 📄 <a href="projects/Congreso ZUNINO.pdf" target="_blank">Certificate of Attendance – Zunino Conference</a></li>
+                    <li>Subido 📄 <a href="projects/Certificados iTeams 2024-2023.pdf" target="_blank">Certificate of Attendance – iTeams</a></li>
+                </ul>
+            </div>
         </section>
 
         <section id="references">
             <h2 class="section-title">References</h2>
-            <p class="text-muted">Academic recommendation letters from university professors:</p>
-            <ul>
-                <li><a href="projects/CARTA RECOMENDACION INSTITUTO CONCI CARPINELLA.docx.pdf" target="_blank">Recommendation Letter – Dr. Mariela Carpinella - Institute Conci Carpinella</a></li>
-                <li><a href="projects/Carta Recomendación para Milagros Lahuerta de Victoria Pisano.pdf" target="_blank">Recommendation Letter - Dr. Victoria Pisano - UNC</a></li>
-            </ul>
+            <div class="interactive-card">
+                <p class="text-muted small mb-2">Academic recommendation letters from university professors:</p>
+                <ul class="interactive-list mb-0" style="list-style: none; padding-left: 0; font-size: 0.95rem; line-height: 2.2;">
+                    <li>✉️ <a href="projects/CARTA RECOMENDACION INSTITUTO CONCI CARPINELLA.docx.pdf" target="_blank">Recommendation Letter – Dr. Mariela Carpinella - Institute Conci Carpinella</a></li>
+                    <li>✉️ <a href="projects/Carta Recomendación para Milagros Lahuerta de Victoria Pisano.pdf" target="_blank">Recommendation Letter - Dr. Victoria Pisano - UNC</a></li>
+                </ul>
+            </div>
         </section>
 
     </main>
