@@ -90,24 +90,67 @@
                 <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
                     <li><strong>Patient Module (Digital Twin):</strong> Enabled remote logging of vital signs (blood pressure, temperature) alongside qualitative context via a digital "Clinical Diary" and notes section.</li>
                     <li><strong>Automated Telemonitoring:</strong> Integrated a telemonitoring pipeline to automatically ingest continuous sensor streams directly into the patient's digital twin without manual input.</li>
-                    <li><strong>Physician Dashboard (Cartella Assistenziale):</strong> Designed a central clinical interface featuring patient registry management (Anagrafica) and a consolidated diagnostic panel.</li>
+                    <li><strong>Physician Dashboard:</strong> Designed a central clinical interface featuring patient registry management and a consolidated diagnostic panel.</li>
                     <li><strong>Data Optimization & Alerts:</strong> Implemented historical trend graphs comparing automated telemetry versus manual monitoring, incorporating clinical status assessment (stable/unstable) and anomaly detection alerts.</li>
                 </ul>
-                <a href="projects/digital_twin.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
+            </div>
+
+           <div class="project-card">
+                <h4>Secure Telemedicine Web Application for ECG Monitoring & Analytics</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Course: Tecnologie per la Telemedicina</p>
+                <p>Developed a full-stack, GDPR-compliant web application utilizing Streamlit for the secure remote upload, monitoring, and analysis of multi-lead electrocardiogram (ECG) data.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Key Contributions & Engineering Pillars:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Interactive Visualization Front-end:</strong> Engineered a high-performance interactive interface simulating millimeter graph paper, allowing clinicians to zoom, filter specific anatomical leads, and seamlessly navigate continuous time-series ECG data.</li>
+                    <li><strong>Digital Signal Processing (DSP) Engine:</strong> Implemented mathematical algorithms to ingest raw electrical signals, execute automated R-peak detection, compute continuous R-R intervals, and extract instantaneous Heart Rate (HR) metrics.</li>
+                    <li><strong>Data Security & GDPR Vault:</strong> Applied 'Privacy by Design' via patient identity pseudonymization, built a custom encryption-at-rest system using Linear Feedback Shift Registers, and integrated SHA-256 cryptographic hashing to ensure absolute data integrity.</li>
+                    <li><strong>Cryptographic Authentication:</strong> Conceptualized and simulated a DH-EKE protocol as an independent Python security engine, guaranteeing zero-knowledge password transmission to eliminate network interception risks.</li>
+                </ul>
             </div>
 
             <div class="project-card">
-                <h4>Streamlit Web Interface for ECG Monitoring</h4>
-                <p class="text-secondary">Biomedical Software Development</p>
-                <p>Developed an intuitive graphical web interface in Python utilizing Streamlit to load, process, and display electrocardiogram (ECG) tracking data effectively for medical interpretation.</p>
-                <a href="projects/ecg_interface.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
+                <h4>Neuronal Network Activity Analysis Across Development & Pharmacology</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Course: Neuroengineering</p>
+                <p>Engineered a unified, high-throughput Python data pipeline to characterize extracellular spontaneous activity and pharmacological modulation in human pluripotent stem cell-derived (hPSC) cortical networks cultured on Microelectrode Arrays (MEAs).</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Key Contributions & Bio-Data Insights:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Signal Processing Pipeline:</strong> Developed a robust computational pipeline using NumPy and SciPy to perform 4th-order Butterworth band-pass filtering (300-3000 Hz) and Common Median Referencing (CMR) to isolate single-unit spike events from Local Field Potentials (LFPs).</li>
+                    <li><strong>Iterative Spike & Burst Sorting:</strong> Implemented MAD-based thresholding and an Interspike Interval (ISI) burst detection algorithm, validating classifications against ground-truth datasets.</li>
+                    <li><strong>Relative Similarity Matrices:</strong> Programmed pairwise statistical comparisons across natural developmental stages (DIV 3-35) and mature drug conditions (DIV 29 with GABA, Gabazine, CNQX, D-AP5, Kainic Acid, and TTX) utilizing normalized similarity indices.</li>
+                    <li><strong>Systems-Level Analysis:</strong> Demonstrated through programmatic data visualizations (Seaborn/Matplotlib) that numerical similarities between drug-constrained configurations and early development do not imply functional biological equivalence.</li>
+                </ul>
+                <a href="projects/Final_Report_Neuro.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
             </div>
-
             <div class="project-card">
-                <h4>Advanced Clustering & Predictive Analytics</h4>
-                <p class="text-secondary">Data Science & Neurotechnology Research</p>
-                <p>Applied machine learning frameworks including Self-Organizing Maps (SOM), Hierarchical Clustering, and Multi-Layer Perceptrons (MLP) for data classification, alongside electrophysiology assays featuring multi-channel spike detection metrics.</p>
-                <a href="projects/data_science_research.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
+                <h4>Microfluidic Hair Follicle-on-a-Chip for Preclinical Minoxidil Screening</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Course: Frontiers in Bioengineering enabling nanotechnologies</p>
+                <p>Designed and modeled a state-of-the-art commercial single-organ-on-chip (OoC) platform engineered to simulate dihydrotestosterone (DHT)-induced androgenetic alopecia (AGA) and evaluate the therapeutic efficacy of Minoxidil under dynamic microenvironments.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Key Contributions & Bio-Design Innovations:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Advanced Thermoplastic Architecture:</strong> Utilized Cyclo Olefin Copolymer (COC) and Polyethylene Terephthalate (PET/BioPET 002) to build a multi-compartment device, significantly minimizing hydrophobic drug absorption compared to legacy PDMS platforms to guarantee true dose-response gradients.</li>
+                    <li><strong>3D Epithelial-Mesenchymal Blueprint:</strong> Structured a spatially organized 3D construct integrating human dermal papilla cell (IDP) spheroids, outer root sheath (ORS) keratinocytes, and dermal fibroblasts embedded in a remodeling Type I collagen matrix under Air-Liquid Interface (ALI) conditions.</li>
+                    <li><strong>Open-Circuit One-Pass Perfusion:</strong> Conceptualized a continuous fluidic circulation strategy that closely mimics systemic vascular nutrient supply and hormone delivery while preventing metabolite waste accumulation.</li>
+                    <li><strong>Real-Time Non-Invasive Analytics:</strong> Integrated dual-wavelength fluorescence monitoring (YFP/CFP ratio tracking) for real-time tracking of canonical Wnt/β-catenin signaling pathway reactivation alongside trichoscopic morphological assessment criteria.</li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="projects/Report_HF_on_a_chip.pdf" target="_blank" class="btn btn-sm btn-primary">View Project Details</a>
+                    <a href="projects/Leaflet_HF_on_a_chip.pdf" target="_blank" class="btn btn-sm btn-outline-secondary" style="color: #64748b; border-color: #64748b;">View Project Leaflet</a>
+                </div>
+            <div class="project-card">
+                <h4>Automated CAD System for Colorectal Cancer vs. Diverticular Disease Differentiation</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Course: Data Science in Healthcare</p>
+                <p>Developed an AI-driven Computer-Aided Diagnosis (CAD) system in Python to automatically differentiating between colorectal cancer and diverticular disease from 3D Computed Tomography (CT) scans, targeting the reduction of misdiagnoses and invasive procedures.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Challenges Solved:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>3D Medical Data Quality Control:</strong> Managed volumetric NIfTI (.nii) files using `nibabel`. Built a preprocessing filter to detect and isolate corrupted profiles, handling spatial resolution mismatches between CT scans and manual masks by labeling anomalies as NaN to secure clean data ingestion.</li>
+                    <li><strong>Cross-Center Validation & Bias Control:</strong> Analyzed statistical feature distributions between two independent hospital databases. Proved data homogeneity across clinical sites to ensure that scanner calibration differences wouldn't introduce institutional bias.</li>
+                    <li><strong>Inter-Observer Variability Engineering:</strong> Addressed the core challenge of conflicting manual physician segmentations.</li>
+                    <li><strong>Clinical Generalizability Testing:</strong> Maintained strict separation of clinical cohorts by reserving one entire database from one of the centers as an unseen external Test Set, verifying the model's accuracy and adaptability in independent hospital environments.</li>
+                </ul>
             </div>
         </section>
 
@@ -116,11 +159,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Technical Skills</h5>
-                    <p>Python, MATLAB, Streamlit, Scikit-learn, Pandas, NumPy, Signal Processing, Machine Learning, Data Architecture, LaTeX, Git.</p>
+                    <p>Python, C++, MATLAB, Microsoft Office Suite, Streamlit, Scikit-learn, Pandas, NumPy, Signal Processing, Machine Learning, Data Architecture, LaTeX, Git.</p>
                 </div>
                 <div class="col-md-6">
                     <h5>Professional Skills</h5>
-                    <p>Analytical Thinking, Technical Problem Solving, Cross-functional Teamwork, Adaptability in Research Environments.</p>
+                    <p>Leadership, Analytical Thinking, Technical Problem Solving, Cross-functional Teamwork, Adaptability in Research Environments.</p>
                 </div>
             </div>
         </section>
@@ -131,25 +174,29 @@
                 <li>Biomedical Software & Medical UI Development</li>
                 <li>Physiological Signal Processing & Core Feature Extraction</li>
                 <li>Advanced Artificial Intelligence & Machine Learning in Healthcare</li>
-                <li>Telemedicine Frameworks & Digital Twins</li>
+                <li>Telemedicine Frameworks</li>
                 <li>Neurotechnology & Brain-Computer Interfaces (BCI)</li>
+                <li>Data Science in Healthcare</li>
             </ul>
         </section>
 
         <section id="languages">
             <h2 class="section-title">Languages</h2>
             <p><strong>Spanish:</strong> Native</p>
-            <p><strong>English:</strong> Full Professional Proficiency</p>
-            <p><strong>Italian:</strong> Professional Working Proficiency (Preparing PLIDA B2 Exam)</p>
-            <strong>German:</strong> Professional Working Proficiency (Preparing PLIDA B2 Exam)</p>
-            <strong>Chinese:</strong> Professional Working Proficiency (Preparing PLIDA B2 Exam)</p>
+            <p><strong>English:</strong> B2</p>
+            <p><strong>Italian:</strong> B2</p>
+            <strong>German:</strong>B1</p>
+            <strong>Chinese:</strong> Basic Level</p>
         </section>
 
         <section id="documents">
             <h2 class="section-title">Documents</h2>
             <ul>
-                <li><a href="certificates/PLIDA_Certificate.pdf" target="_blank">PLIDA Italian Language Certificate</a></li>
-                <li><a href="certificates/Academic_Transcript.pdf" target="_blank">Academic Transcript – Politecnico di Torino</a></li>
+                <li><a href="certificates/PLIDA B2.pdf" target="_blank">PLIDA Italian Language Certificate</a></li>
+                <li><a href="certificates/IFC certificado.pdf" target="_blank">International Fellowship Class-Certificate</a></li>
+                <li><a href="certificates/Teilnahmebestätigung.pdf" target="_blank">German B1 Level - Certificate</a></li>
+                <li><a href="certificates/cambridge-certificado.pdf" target="_blank">Cambridge English Level Certificate</a></li>
+                <li><a href="certificates/Academic_Transcript.pdf" target="_blank">Academic Transcript – Universidad Nacional de Córdoba</a></li>
             </ul>
         </section>
 
