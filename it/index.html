@@ -3,121 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milagros Lahuerta | Portfolio</title>
+    <title>María Milagros Lahuerta | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 0; }
-        .nav-lang { font-weight: bold; text-decoration: none; color: white; }
-        .section-title { border-bottom: 2px solid #2a5298; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #1e3c72; }
-        .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        body { background-color: #f4f3ef; color: #334155; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 56px; }
+        .bg-corporate { background-color: #475569 !important; } /* Azul acero oscuro */
+        
+        /* Encabezado mate */
+        .hero-section { background: linear-gradient(135deg, #475569 0%, #64748b 100%); color: white; padding: 50px 0; } 
+        .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); margin-bottom: 15px; }
+        .section-title { border-bottom: 2px solid #64748b; padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; color: #475569; font-weight: bold; }
+        
+        /* 🚀 EFECTOS INTERACTIVOS GLOBALES PARA TARJETAS */
+        .project-card, .interactive-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            border-left: 4px solid #64748b; 
+            margin-bottom: 20px; 
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+        }
+        /* Elevación y brillo sutil al pasar el mouse por encima */
+        .project-card:hover, .interactive-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+            border-left-color: #c5a880; /* El borde vira al ocre suave */
+        }
+        
+        /* 🔗 EFECTOS INTERACTIVOS PARA ENLACES DE LISTAS */
+        .interactive-list li {
+            padding: 4px 0;
+            transition: transform 0.2s ease;
+        }
+        .interactive-list li:hover {
+            transform: translateX(6px); /* Pequeño desplazamiento hacia la derecha */
+        }
+        .interactive-list a {
+            color: #334155;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .interactive-list a:hover {
+            color: #c5a880 !important; /* El link se ilumina en ocre */
+            text-decoration: underline;
+        }
+        
+        /* Botones principales de proyectos */
+        .btn-primary { background-color: #64748b; border-color: #64748b; color: white; transition: background-color 0.2s, transform 0.2s; }
+        .btn-primary:hover { background-color: #475569; border-color: #475569; color: white; transform: scale(1.02); }
+        
+        /* Botón de CV - Ocre Suave */
+        .btn-cv { background-color: #c5a880; border-color: #c5a880; color: white; font-weight: 600; transition: background-color 0.2s, transform 0.2s; }
+        .btn-cv:hover { background-color: #b0936b; border-color: #b0936b; color: white; transform: scale(1.03); }
+        
+        /* Selector de Idioma */
+        .lang-active { color: #ffd19a !important; font-weight: bold; } 
+        .lang-inactive { color: rgba(255, 255, 255, 0.5) !important; font-weight: normal; }
     </style>
 </head>
 <body>
 
-    <div class="bg-dark text-end px-4 py-2">
-        <a href="../index.html" class="nav-lang">EN</a> | 
-        <a href="index.html" class="nav-lang text-warning">IT</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-corporate fixed-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">MML</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">Su di me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Competenze</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Interessi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#languages">Lingue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documents">Documenti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#references">Referenze</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a href="../index.html" class="lang-inactive text-decoration-none">EN</a> <span class="text-white-50">|</span> 
+                    <a href="index.html" class="lang-active text-decoration-none">IT</a>
+                </span>
+            </div>
+        </div>
+    </nav>
 
     <header class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Milagros Lahuerta</h1>
-            <p class="lead font-italic">Studente di Ingegneria Biomedica | Politecnico di Torino</p>
-            <div class="mt-4">
-                <p class="mb-1"><strong>Email:</strong> milagroslahuerta@example.com</p>
-                <p class="mb-1"><strong>LinkedIn:</strong> <a href="#" class="text-white text-decoration-underline">milagroslahuerta</a></p>
-                <p class="mb-3"><strong>Località:</strong> Torino, Italia</p>
-                <a href="#projects" class="btn btn-outline-light m-1">Visualizza Progetti</a>
-                <a href="#documents" class="btn btn-outline-light m-1">Documenti</a>
+            <img src="../profile_cv.jpg" alt="María Milagros Lahuerta" class="profile-img">
+            <h1 class="display-5 fw-bold">María Milagros Lahuerta</h1>
+            <p class="lead italic">Studente di Laurea Magistrale in Ingegneria Biomedica</p>
+            <div class="mt-3" style="font-size: 0.95rem;">
+                <p class="mb-1"><strong>Email:</strong> milagroslahuerta00@gmail.com</p>
+                <p class="mb-1"><strong>Telefono:</strong> +39 331 806 7506</p>
+                <p class="mb-1"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mar%C3%ADa-milagros-lahuerta-ab2a16258/?skipRedirect=true" target="_blank" class="text-white text-decoration-underline">María Milagros Lahuerta</a></p>
+                <p class="mb-3"><strong>Sede:</strong> Torino, Italia</p>
+                <a href="../projects/CV Maria Milagros Lahuerta.pdf" target="_blank" class="btn btn-cv btn-sm px-3 py-2">Visualizza il Curriculum Vitae</a>
             </div>
         </div>
     </header>
 
-    <main class="container my-5" style="max-width: 900px;">
+    <main class="container my-5" style="max-width: 850px;">
         
         <section id="about">
-            <h2 class="section-title">Su di Me / Informazioni</h2>
-            <p>Sono una studentessa di Ingegneria Biomedica attualmente iscritta al <strong>Politecnico di Torino (POLITO)</strong>. Il mio percorso accademico e le mie esperienze pratiche di laboratorio si concentrano principalmente sullo sviluppo di software biomedico, l'elaborazione di segnali fisiologici e l'applicazione della data science avanzata per l'ottimizzazione delle tecnologie sanitarie.</p>
-            <p>Ho sviluppato progetti tecnici specializzati che includono algoritmi di clustering avanzati, architetture neurali e strutture di telemonitoraggio. Sono fortemente motivata dall'integrazione di tecnologia, intelligenza artificiale e sistemi medici per migliorare l'assistenza al paziente.</p>
+            <h2 class="section-title">Su di me</h2>
+            <p>Sono una studentessa magistrale in Ingegneria Biomedica, attualmente iscritta al programma di doppia laurea tra l'<strong>Università Nazionale di Córdoba (UNC)</strong> e il <strong>Politecnico di Torino (POLITO)</strong>, dove frequento l'ultimo anno del Master of Science.</p>
+            <p>Il mio percorso accademico copre una vasta gamma di settori dell'ingegneria biomedica, tra cui i dispositivi medici, l'elaborazione di segnali e immagini biomediche e i sistemi di monitoraggio fisiologico basati su sensori. Ho inoltre approfondito ambiti interdisciplinari come le neuroscienze, la neuroingegneria e l'ingegneria dei tessuti, che hanno consolidato la mia capacità di operare all'intersezione tra ingegneria, biologia e tecnologie sanitarie.</p>
+            <p>Attualmente sono alla ricerca di opportunità di tirocinio e/o tesi che mi consentano di approfondire le mie competenze, contribuire a progetti innovativi e ad alto impatto, e proseguire nel mio percorso di crescita tecnica e professionale. Sono particolarmente interessata a contesti in cui convergono ingegneria, tecnologia e cura della salute, e sono aperta a esplorare diverse tematiche all'interno dell'ingegneria biomedica.</p>
         </section>
 
         <section id="projects">
             <h2 class="section-title">Progetti Selezionati</h2>
-            <p class="text-muted">Ingegneria biomedica incentrata su software clinici, analisi dei dati e architetture di telemedicina.</p>
             
             <div class="project-card">
-                <h4>Digital Twin per il Monitoraggio del Paziente</h4>
-                <p class="text-secondary">Progetto di Telemedicina e Sistemi Sanitari</p>
-                <p>Progettazione di un diagramma di architettura di comunicazione per un sistema di gemello digitale (Digital Twin) mirato al monitoraggio remoto del paziente. Integrazione di diari clinici e ottimizzazione del flusso di dati telemetrici continui.</p>
-                <a href="#" class="btn btn-sm btn-primary">Dettagli del Progetto</a>
+                <h4>Tirocinio in Ingegneria Clinica – Healthcare Technology Management</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Sede: Instituto Conci Carpinella - Córdoba, ARGENTINA</p>
+                <p>Ho svolto un tirocinio formativo completo in Ingegneria Clinica focalizzato sulla gestione del ciclo di vita, sul controllo qualità e sul supporto tecnico di sistemi medici avanzati presso un centro di diagnostica e trattamento ad alta complessità.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Principali responsabilità e flussi di lavoro clinici:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Healthcare Technology Management (HTM):</strong> Definizione ed esecuzione di protocolli di manutenzione preventiva pianificata (PPM) e correttiva su apparecchiature mediche multi-reparto, garantendo la massima continuità operativa e la sicurezza nelle aree cliniche critiche.</li>
+                    <li><strong>Supporto ai sistemi di diagnostica e trattamento:</strong> Calibrazione tecnica, test di sicurezza elettrica e risoluzione di problemi (troubleshooting) su sistemi biomedici avanzati, inclusi ecografi, colonne per endoscopia, sistemi di radiografia digitale e monitor multiparametrici.</li>
+                    <li><strong>Assicurazione Qualità e Metrologia:</strong> Utilizzo di analizzatori e simulatori biomedici specializzati per verificare le prestazioni delle apparecchiature in conformità con i severi standard di sicurezza istituzionali e le linee guida dei produttori internazionali.</li>
+                    <li><strong>Operazioni cliniche e mitigazione del rischio:</strong> Collaborazione diretta con il personale medico e i fornitori esterni di servizi tecnici per ottimizzare l'allocazione delle risorse, gestire la logistica dei pezzi di ricambio e mitigare i rischi operativi negli ambienti di cura del paziente.</li>
+                </ul>
+                <a href="../projects/Informe de tareas realizadas en PPS - Conci Carpinela.pdf" target="_blank" class="btn btn-sm btn-primary">Visualizza i dettagli del progetto</a>
             </div>
 
             <div class="project-card">
-                <h4>Interfaccia Web Streamlit per il Monitoraggio ECG</h4>
-                <p class="text-secondary">Sviluppo di Software Biomedico</p>
-                <p>Sviluppo di un'interfaccia web grafica intuitiva in Python utilizzando Streamlit per caricare, elaborare e visualizzare efficacemente i dati di tracciamento dell'elettrocardiogramma (ECG) per l'interpretazione medica.</p>
-                <a href="#" class="btn btn-sm btn-primary">Visualizza il Codice</a>
+                <h4>Sistema Digital Twin per il Monitoraggio Remoto del Paziente</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Corso: Progettazione di software medicali</p>
+                <p>Sviluppo di una piattaforma sanitaria digitale integrata per il tracciamento continuo e il follow-up clinico del paziente, colmando il divario tra i dati inseriti a domicilio dall'utente e l'analisi medica professionale.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Contributi chiave e architettura:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Modulo Paziente (Digital Twin):</strong> Registrazione remota dei parametri vitali (pressione arteriosa, temperatura) associata a un contesto qualitativo mediante un "Diario Clinico" digitale e una sezione note.</li>
+                    <li><strong>Telemonitoraggio automatizzato:</strong> Integrazione di una pipeline di telemonitoraggio per l'acquisizione automatica di flussi continui da sensori direttamente nel Digital Twin del paziente, senza inserimento manuale.</li>
+                    <li><strong>Dashboard del Medico:</strong> Progettazione di un'interfaccia clinica centrale dotata di gestione del registro dei pazienti e un pannello diagnostico consolidato.</li>
+                    <li><strong>Ottimizzazione dei dati e avvisi:</strong> Implementazione di grafici sull'andamento storico che confrontano la telemetria automatizzata con il monitoraggio manuale, incorporando la valutazione dello stato clinico (stabile/instabile) e avvisi di rilevamento anomalie.</li>
+                </ul>
             </div>
 
             <div class="project-card">
-                <h4>Clustering Avanzato e Analisi Predittiva</h4>
-                <p class="text-secondary">Data Science e Ricerca in Neurotecnologie</p>
-                <p>Applicazione di framework di machine learning, inclusi Self-Organizing Maps (SOM), Clustering Gerarchico e Multi-Layer Perceptrons (MLP) per la classificazione dei dati clinici, insieme ad analisi di elettrofisiologia con metriche di spike detection multicanale.</p>
-                <a href="#" class="btn btn-sm btn-primary">Visualizza il Report</a>
+                <h4>Applicazione Web di Telemedicina Sicura per Monitoraggio e Analisi ECG</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Corso: Tecnologie per la Telemedicina</p>
+                <p>Sviluppo di un'applicazione web full-stack conforme al GDPR utilizzando Streamlit per il caricamento remoto sicuro, il monitoraggio e l'analisi di dati elettrocardiografici (ECG) a più derivazioni.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Contributi chiave e pilastri ingegneristici:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Interfaccia front-end di visualizzazione interattiva:</strong> Sviluppo di un'interfaccia interattiva ad alte prestazioni che simula la carta millimetrata per ECG, consentendo ai clinici di effettuare zoom, filtrare specifiche derivazioni anatomiche e navigare fluidamente nei dati delle serie temporali.</li>
+                    <li><strong>Motore di elaborazione dei segnali digitali (DSP):</strong> Implementazione di algoritmi matematici per l'acquisizione di segnali elettrici grezzi, l'esecuzione del rilevamento automatico dei picchi R, il calcolo continuo degli intervalli R-R ed estrazione della frequenza cardiaca istantanea (HR).</li>
+                    <li><strong>Sicurezza dei dati e conformità GDPR:</strong> Applicazione dei principi di 'Privacy by Design' tramite pseudonimizzazione dell'identità del paziente, sviluppo di un sistema di crittografia dei dati a riposo personalizzato basato su registri a scorrimento a retroazione lineare (LFSR) e integrazione dell'hashing crittografico SHA-256 per garantire l'assoluta integrità dei dati.</li>
+                    <li><strong>Autenticazione crittografica:</strong> Concettualizzazione e simulazione del protocollo DH-EKE come motore di sicurezza Python indipendente, garantendo la trasmissione delle password a conoscenza zero per eliminare i rischi di intercettazione in rete.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h4>Analisi dell'Attività di Reti Neuronali nello Sviluppo e in Farmacologia</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Corso: Neuroengineering</p>
+                <p>Sviluppo di una pipeline computazionale unificata ad alta efficienza in Python per caratterizzare l'attività extracellulare spontanea e la modulazione farmacologica in reti corticali derivate da cellule staminali pluripotenti umane (hPSC) coltivate su matrici di microelettrodi (MEA).</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Contributi chiave e bio-data insights:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Pipeline di elaborazione del segnale:</strong> Sviluppo di un flusso computazionale robusto tramite NumPy e SciPy per eseguire il filtraggio passa-banda di Butterworth di 4° ordine (300-3000 Hz) e la Common Median Referencing (CMR) per isolare gli eventi di spike da potenziali di campo locale (LFP).</li>
+                    <li><strong>Ordinamento iterativo di spike e burst:</strong> Implementazione di soglie basate su MAD e di un algoritmo di rilevamento dei burst a intervallo inter-spike (ISI), validando le classificazioni rispetto a dataset di riferimento.</li>
+                    <li><strong>Matrici di somiglianza relativa:</strong> Programmazione di confronti statistici a coppie tra stadi di sviluppo naturale ed esposizione a farmaci in reti mature (es. GABA, Gabazine, CNQX, D-AP5, Acido Kainico e TTX) utilizzando indici di somiglianza normalizzati.</li>
+                    <li><strong>Analisi a livello di sistema:</strong> Dimostrazione grafica tramite visualizzazione dati (Seaborn/Matplotlib) del fatto che le somiglianze numeriche tra configurazioni indotte da farmaci e fasi precoci dello sviluppo non implicano un'equivalenza biologico-funzionale.</li>
+                </ul>
+                <a href="../projects/Final_Report_Neuro.pdf" target="_blank" class="btn btn-sm btn-primary">Visualizza i dettagli del progetto</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Piattaforma Microfluidica Hair Follicle-on-a-Chip per lo Screening Preclinico del Minoxidil</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Corso: Frontiers in Bioengineering enabling nanotechnologies</p>
+                <p>Progettazione e modellazione di una piattaforma commerciale avanzata di organ-on-chip singolo (OoC) ingegnerizzata per simulare l'alopecia androgenetica (AGA) indotta da diidrotestosterone (DHT) e valutare l'efficacia terapeutica del Minoxidil in microambienti dinamici.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Contributi chiave e innovazioni di bio-design:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Architettura in termoplastico avanzato:</strong> Utilizzo di copolimero ciclico olefinico (COC) e polietilene tereftalato (PET/BioPET 002) per la costruzione di un dispositivo multi-scomparto, minimizzando l'assorbimento idrofobico dei farmaci rispetto alle piattaforme tradizionali in PDMS per garantire gradienti dose-risposta reali.</li>
+                    <li><strong>Mappatura strutturale 3D epitelio-mesenchimale:</strong> Strutturazione di un costrutto 3D spazialmente organizzato integrando sferoidi di cellule della papilla dermica umana (IDP), cheratinociti della guaina radicolare esterna (ORS) e fibroblasti dermici inclusi in una matrice di collagene di tipo I sotto condizioni di interfaccia aria-liquido (ALI).</li>
+                    <li><strong>Perfusione single-pass a circuito aperto:</strong> Concettualizzazione di una strategia di circolazione fluidica continua che mima fedelmente l'apporto vascolare sistemico di nutrienti e la somministrazione ormonale, prevenendo al contempo l'accumulo di scarti metabolici.</li>
+                    <li><strong>Analisi in tempo reale non invasiva:</strong> Integrazione del monitoraggio della fluorescenza a doppia lunghezza d'onda (rapporto YFP/CFP) per il tracciamento in tempo reale della riattivazione della via di segnalazione canonica di Wnt/β-catenina, affiancato da criteri di valutazione morfologica tricoscopica.</li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="../projects/1.1 Report HF-on-a-chip.pdf" target="_blank" class="btn btn-sm btn-primary">Visualizza i dettagli del progetto</a>
+                    <a href="../projects/1.2 Leaflet HF-on-a-chip.pdf" target="_blank" class="btn btn-sm btn-outline-secondary" style="color: #64748b; border-color: #64748b;">Visualizza il Leaflet</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h4>Sistema CAD Automatizzato per la Diagnosi Differenziale tra Cancro Colorettale e Malattia Diverticolare</h4>
+                <p class="text-secondary" style="font-size: 0.9rem; font-style: italic;">Corso: Data Science in Healthcare</p>
+                <p>Sviluppo in Python di un sistema di diagnosi assistita dall'elaboratore (CAD) basato su intelligenza artificiale per differenziare automaticamente il cancro colorettale dalla malattia diverticolare a partire da scansioni TC 3D, mirando alla riduzione di diagnosi errate e procedure invasive.</p>
+                
+                <h5 class="mt-3" style="font-size: 0.95rem; color: #475569; font-weight: 600;">Sfide risolte:</h5>
+                <ul class="mb-3" style="font-size: 0.9rem; padding-left: 20px;">
+                    <li><strong>Controllo qualità di dati medici 3D:</strong> Gestione di file volumetrici NIfTI (.nii) tramite la libreria `nibabel`. Sviluppo di un filtro di pre-elaborazione per rilevare e isolare profili corrotti, gestendo le incongruenze di risoluzione spaziale tra le scansioni TC e le maschere manuali etichettando le anomalie come NaN per proteggere l'integrità dei dati inseriti.</li>
+                    <li><strong>Validazione multi-centro e controllo del bias:</strong> Analisi delle distribuzioni statistiche delle caratteristiche tra due database ospedalieri indipendenti. Dimostrazione dell'omogeneità dei dati tra i diversi centri clinici per garantire che le differenze di calibrazione degli scanner non introducessero bias istituzionali.</li>
+                    <li><strong>Ingegnerizzazione della variabilità inter-osservatore:</strong> Gestione della sfida principale legata alle segmentazioni manuali discordanti tra medici mediante l'utilizzo di subset di dati a doppio operatore per armonizzare l'input delle caratteristiche cliniche.</li>
+                    <li><strong>Test di generalizzabilità clinica:</strong> Separazione rigorosa delle coorti cliniche riservando un intero database di uno dei centri come Test Set esterno non visibile, verificando l'accuratezza e l'adattabilità del modello in ambienti ospedalieri indipendenti.</li>
+                </ul>
+                <a href="../projects/CAD_Healthcare_Project.pdf" target="_blank" class="btn btn-sm btn-primary">Visualizza i dettagli del progetto</a>
             </div>
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Competenze (Skills)</h2>
-            <div class="row">
+            <h2 class="section-title">Competenze</h2>
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <h5>Competenze Tecniche</h5>
-                    <p>Python, MATLAB, Streamlit, Scikit-learn, Pandas, NumPy, Elaborazione dei Segnali (ECG), Machine Learning, Architettura dei Dati, LaTeX, Git.</p>
+                    <div class="interactive-card" style="height: 100%;">
+                        <h5 style="color: #475569; font-weight: 600; margin-bottom: 15px;">Competenze Tecniche</h5>
+                        <p style="font-size: 0.95rem; line-height: 1.7;">Python, C++, MATLAB, Microsoft Office Suite, Streamlit, Signal Processing, Machine Learning, Data Architecture, LaTeX, Git.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h5>Competenze Professionali</h5>
-                    <p>Pensiero Analitico, Risoluzione di Problemi Tecnici, Lavoro di Squadra Interfunzionale, Adattabilità in Ambienti di Ricerca.</p>
+                    <div class="interactive-card" style="height: 100%;">
+                        <h5 style="color: #475569; font-weight: 600; margin-bottom: 15px;">Competenze Professionali</h5>
+                        <p style="font-size: 0.95rem; line-height: 1.7;">Leadership, Pensiero Analitico, Risoluzione di Problemi Tecnici, Lavoro di Squadra Interfunzionale, Adattabilità in Ambienti di Ricerca.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="interests">
-            <h2 class="section-title">Interessi di Ingegneria</h2>
-            <ul>
-                <li>Sviluppo di Software Biomedico e UI Mediche</li>
-                <li>Elaborazione di Segnali Fisiologici ed Estrazione di Caratteristiche</li>
-                <li>Intelligenza Artificiale Avanzata e Machine Learning nella Sanità</li>
-                <li>Framework di Telemedicina e Digital Twins</li>
-                <li>Neurotecnologie e Interfacce Cervello-Computer (BCI)</li>
-            </ul>
+            <h2 class="section-title">Interessi Ingegneristici</h2>
+            <div class="interactive-card">
+                <ul class="mb-0" style="font-size: 0.95rem; line-height: 2; padding-left: 20px;">
+                    <li>Sviluppo di Software Biomedici e UI Medicali</li>
+                    <li>Elaborazione di Segnali Fisiologici ed Estrazione di Caratteristiche Fondamentali</li>
+                    <li>Intelligenza Artificiale Avanzata e Machine Learning in Sanità</li>
+                    <li>Infrastrutture di Telemedicina</li>
+                    <li>Neurotecnologie e Interfacce Cervello-Computer (BCI)</li>
+                    <li>Data Science in Sanità</li>
+                </ul>
+            </div>
         </section>
 
         <section id="languages">
             <h2 class="section-title">Lingue</h2>
-            <p><strong>Spagnolo:</strong> Madrelingua</p>
-            <p><strong>Inglese:</strong> Ottima conoscenza professionale</p>
-            <p><strong>Italiano:</strong> Conoscenza professionale operativa (In preparazione per l'esame PLIDA B2)</p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇪🇸 <strong>Spagnolo</strong></span>
+                            <span class="text-muted small fw-bold">Madrelingua</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 100%; background-color: #c5a880;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇬🇧 <strong>Inglese</strong></span>
+                            <span class="text-muted small fw-bold">Livello B2</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 75%; background-color: #64748b;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇮🇹 <strong>Italiano</strong></span>
+                            <span class="text-muted small fw-bold">Livello B2</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 75%; background-color: #64748b;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇩🇪 <strong>Tedesco</strong></span>
+                            <span class="text-muted small fw-bold">Livello B1</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 50%; background-color: #94a3b8;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="interactive-card" style="padding: 15px 20px;">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span>🇨🇳 <strong>Cinese</strong></span>
+                            <span class="text-muted small fw-bold">Livello Base</span>
+                        </div>
+                        <div class="progress" style="height: 6px; background-color: #e2e8f0;">
+                            <div class="progress-bar" style="width: 25%; background-color: #cbd5e1;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="documents">
             <h2 class="section-title">Documenti</h2>
-            <ul>
-                <li><a href="#">Curriculum Vitae Accademico (PDF)</a></li>
-                <li><a href="#">Certificato degli Studi – Politecnico di Torino</a></li>
-            </ul>
+            <div class="interactive-card">
+                <ul class="interactive-list mb-0" style="list-style: none; padding-left: 0; font-size: 0.95rem; line-height: 2.2;">
+                    <li><a href="../projects/Lahuerta_fd.pdf" target="_blank">Certificato degli Esami Universitari (Academic Transcript) – UNC</a></li>
+                    <li><a href="../projects/PLIDA B2.pdf" target="_blank">Certificato di Lingua Italiana PLIDA B2</a></li>
+                    <li><a href="../projects/IFC certificado.pdf" target="_blank">International Fellowship Class - Certificato</a></li>
+                    <li><a href="../projects/Teilnahmebestätigung.PDF" target="_blank">Certificato di Lingua Tedesca Livello B1</a></li>
+                    <li><a href="../projects/cambridge-certificado.pdf" target="_blank">Certificato di Lingua Inglese Cambridge</a></li>
+                    <li><a href="../projects/certificado-chino.pdf" target="_blank">Certificato di Lingua Cinese</a></li>
+                    <li><a href="../projects/Chair.pdf" target="_blank">Certificato IEEE UNC Student Branch Chair</a></li>
+                    <li><a href="../projects/Vice Chair.pdf" target="_blank">Certificato IEEE UNC Student Branch Vice Chair</a></li>
+                    <li><a href="../projects/WIE 2025.pdf" target="_blank">Certificato di Iscrizione IEEE WIE 2025</a></li>
+                    <li><a href="../projects/EMBS 2025.pdf" target="_blank">Certificato di Iscrizione IEEE EMBS</a></li>
+                    <li><a href="../projects/certificates_MaríaMilagrosLahuerta.png" target="_blank">Corso: Strumenti di Intelligenza Artificiale nell'Imaging Medico</a></li>
+                    <li><a href="../projects/impresion3D.png" target="_blank">Corso: Progettazione e Stampa 3D in Bioingegneria</a></li>
+                    <li><a href="../projects/Congreso ZUNINO.pdf" target="_blank">Attestato di Partecipazione – Congresso Scientifico Zunino</a></li>
+                    <li><a href="../projects/Certificados iTeams 2024-23.pdf" target="_blank">Certificato del Programma iTeams</a></li>
+                </ul>
+            </div>
         </section>
 
         <section id="references">
             <h2 class="section-title">Referenze</h2>
-            <p class="text-muted">Lettere di raccomandazione accademiche e professionali disponibili su richiesta.</p>
+            <div class="interactive-card">
+                <p class="text-muted small mb-2">Lettere di raccomandazione accademiche:</p>
+                <ul class="interactive-list mb-0" style="list-style: none; padding-left: 0; font-size: 0.95rem; line-height: 2.2;">
+                    <li><a href="../projects/CARTA RECOMENDACION INSTITUTO CONCI CARPINELLA.docx.pdf" target="_blank">Lettera di Raccomandazione – Dr.ssa Mariela Carpinella - Istituto Conci Carpinella</a></li>
+                    <li><a href="../projects/Carta Recomendación para Milagros Lahuerta de Victoria Pisano.pdf" target="_blank">Lettera di Raccomandazione - Dr.ssa Victoria Pisano - UNC</a></li>
+                </ul>
+            </div>
         </section>
 
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p class="mb-0">&copy; 2026 Milagros Lahuerta. Creato con GitHub Pages.</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
